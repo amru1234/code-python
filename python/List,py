@@ -1,0 +1,126 @@
+'''a="Amruta"
+b="Nidhi"
+c="Harsh"
+L=[a,b,c]
+m=["Shy",2,"@"]
+print(L)
+print(m)
+print(m[0])
+
+L=[]
+for i in range(1,21):
+    L=L+[i]
+print(L)
+
+L=[]
+for i in range(5):
+   str=input()
+   L=L+[str]
+print(L)
+
+L=["Sewakram","Manju","Kavita","Nidhi","Amruta","Harsh","Karan"]
+for i in range(len(L)-1,-1,-1):
+    print(L[i])
+print()
+
+L=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+k=int(input())
+if k in L:
+    print("Kth element is exist")
+else:
+    print("Kth element is not exist")
+print()
+s="Amruta Bagde"
+print(list(s))
+
+N = int(input())
+L=[]
+for i in range(N):
+    a=int(input())
+    L.append(a)
+print(sum(L))
+print(sum(L) / N)
+
+N = int(input())
+L=[]
+for i in range(1,N*2+1):
+    if i%2!=0:
+        L=L+[i]
+print(L)
+
+N = int(input())
+L=[]
+for i in range(N):
+    a=int(input())
+    L.append(a)
+sum=int(input())
+for i in range(N):
+    for j in range(i+1,N):
+        if L[i]+L[j]==sum:
+            print(L[i],L[j])
+print()
+
+N=int(input())
+summ=[]
+EL=[]
+for i in range(N):
+    a=int(input())
+    IL=[]
+    sum=0
+    for j in range(a):
+        b=int(input())
+        sum=sum+b
+        IL=IL+[b]
+    EL=EL+[IL]
+    summ=summ+[sum]
+print(EL)
+print(summ)
+
+N=int(input())
+L=[]
+for i in range(N):
+    R=[]
+    a=int(input())
+    for i in range(R):
+        b=int(input())
+        R=R+[b]
+    L=L+[R]
+    
+str=str(input())
+c=0
+for i in range(len(str)):
+     if((str[1]>='a' and str[1]<='z') or (str[i]>='A' and str[i]<='Z')):
+               c=c+1
+               
+print(c)'''
+
+T = int(input())
+
+for _ in range(T):
+    N, K, L = map(int, input().split())
+    Li = []
+    
+    for _ in range(N):  # Using _ as a throwaway variable since we don't need its value
+        a = int(input())
+        Li.append(a)
+    
+    if K == 1:
+        print(sum(Li))  # Changed L to Li, which is the list of elements
+    else:
+        sum1 = 0
+        
+        for _ in range(K):
+            p = max(Li)
+            sum1 += p
+            Li.remove(p)
+            
+        print(sum1)  # Changed sum to sum1
+    
+
+
+    
+
+
+        
+
+
